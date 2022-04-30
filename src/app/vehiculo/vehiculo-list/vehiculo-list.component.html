@@ -1,26 +1,26 @@
-<div class="panelTitle">
-  <h3>Vehiculos</h3>
-
-  <div class="cardMuseum overflow-auto panel">
-    <div class="accordion accordioneArtwork" id="accordionExample">
-      <div class="accordion-item" *ngFor="let vehiculo of vehiculos; let i = index">
-        <h2 class="accordion-header" [id]="'heading'+i">
-          <button  id="{{ vehiculo.id }}" class="accordion-button bnt btn-light btnArtwork" [ngClass]="{ 'collapsed': i != 0 }" type="button" data-bs-toggle="collapse" [attr.data-bs-target]="'#collapse'+i" aria-expanded="true" [attr.aria-controls]="'collapse'+i" >
-            {{ vehiculo.marca }}
-          </button >
-        </h2>
-        <div [id]="'collapse'+i" class="accordion-collapse collapse" [attr.aria-labelledby]="'heading'+i" data-bs-parent="#accordionExample">
-          <div class="accordion-body ">
-            <strong>Name: </strong>{{ vehiculo.marca }}
-            <br>
-            <strong>Description: </strong>{{ vehiculo.marca }}
-            <br>
-            <strong>Year: </strong>{{ vehiculo.marca }}
-            <br>
-            <strong>Type: </strong>{{ vehiculo.marca }}
-          </div>
-        </div>
-      </div>
-    </div>
+<div>
+  <h3>TuSegundazo.com</h3>
+  <div>
+    <img src="assets/Logo.JPG" alt="imagen" width="100%" height="20%">
+  </div>
+  <div class="col-sm-6">
+    <table class="table">
+      <thead>
+        <tr class="table-dark">
+          <th scope="col">#</th>
+          <th scope="col">Marca</th>
+          <th scope="col">Línea</th>
+          <th scope="col">Modelo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let vehiculo of vehiculos; let i = index">
+          <th scope="row">{{vehiculo.id}}</th>
+          <td>{{vehiculo.marca}}</td>
+          <td>{{vehiculo.linea}}</td>
+          <td>{{vehiculo.modelo}}</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </div>
