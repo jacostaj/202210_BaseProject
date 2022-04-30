@@ -1,7 +1,7 @@
 <div>
   <h3>TuSegundazo.com</h3>
   <div>
-    <img src="assets/Logo.JPG" alt="imagen" width="100%" height="20%">
+    <img src="assets/Logo.JPG" alt="imagen" width="100%" height="100%">
   </div>
   <div class="col-sm-6">
     <table class="table">
@@ -14,7 +14,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let vehiculo of vehiculos; let i = index">
+        <tr *ngFor="let vehiculo of vehiculos">
           <th scope="row">{{vehiculo.id}}</th>
           <td>{{vehiculo.marca}}</td>
           <td>{{vehiculo.linea}}</td>
@@ -22,5 +22,14 @@
         </tr>
       </tbody>
     </table>
+  </div>
+  <div>
+    <p>Total Renault: {{countRenault}}</p>
+    <p>Total Chevrolet: {{countChevrolet}} </p>
+    <p>Total Nissan: {{countNissan}} </p>
+  </div>
+  <br>
+  <div>
+    <p class="centrar">Contact us: +57 3102105253 - info@tusegundazo.com - @tusegundazo</p>
   </div>
 </div>

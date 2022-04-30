@@ -8,10 +8,16 @@ import { VehiculoService } from '../vehiculo.service';
 })
 export class VehiculoListComponent implements OnInit {
   vehiculos: Array<Vehiculo> = [];
+  countRenault = 0;
+  countChevrolet = 0;
+  countNissan= 0 ;
   constructor(private vehiculoService: VehiculoService) { }
   getVehiculos(): void {
     this.vehiculoService.getVehiculos().subscribe((vehiculos) => {
       this.vehiculos = vehiculos;
+      this.countRenault = vehiculos.filter(vehiculo => vehiculo.marca === "Renault" ).length;
+      this.countChevrolet = vehiculos.filter(vehiculo => vehiculo.marca === "Chevrolet" ).length;
+      this.countNissan = vehiculos.filter(vehiculo => vehiculo.marca === "Nissan" ).length;
     });
   }
 
